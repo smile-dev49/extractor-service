@@ -11,6 +11,7 @@ import traceback
 from io import BytesIO
 from pathlib import Path
 from typing import Optional, List, Union
+from urllib.parse import urlparse, urlunparse
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, File, UploadFile, Form, HTTPException, status
@@ -554,6 +555,29 @@ async def extract_job_pdfs(
                     "error": "No PDF URL"
                 })
                 continue
+            
+            # Fix PDF URL if it points to wrong host/port
+            # Replace any host:port in the PDF URL with the scraper service URL
+            try:
+                parsed_pdf = urlparse(pdf_url)
+                parsed_scraper = urlparse(scraper_url)
+                
+                # If PDF URL has different host/port than scraper service, replace it
+                if parsed_pdf.netloc != parsed_scraper.netloc:
+                    logger.info(f"Replacing PDF URL host from {parsed_pdf.netloc} to {parsed_scraper.netloc}")
+                    # Reconstruct URL with scraper service host/port
+                    pdf_url = urlunparse((
+                        parsed_scraper.scheme,  # Use scraper service scheme
+                        parsed_scraper.netloc,  # Use scraper service host:port
+                        parsed_pdf.path,        # Keep original path
+                        parsed_pdf.params,      # Keep original params
+                        parsed_pdf.query,       # Keep original query
+                        parsed_pdf.fragment     # Keep original fragment
+                    ))
+                    logger.info(f"Updated PDF URL: {pdf_url}")
+            except Exception as e:
+                logger.warning(f"Could not parse/fix PDF URL {pdf_url}: {e}")
+                # Continue with original URL
             
             try:
                 # Process PDF directly from URL (in-memory, no disk save)
