@@ -1,0 +1,107 @@
+{
+    "TA_001": [
+        "Dénomination",
+        "Dénomination ou raison sociale",
+        "Bezeichnung der Gesellschaft oder Firmenname"
+    ],
+    "TA_003": [
+        "Forme juridique",
+        "Rechtsform"
+    ],
+    "TA_004": [
+        "Siège social",
+        "Sitz der Gesellschaft"
+    ],
+    "TA_005": [
+        "Objet",
+        "Objet social",
+        "Zweck der Gesellschaft"
+    ],
+    "TA_006": [
+        "Capital social / Fonds social",
+        "Gesellschaftskapital",
+        "Kapital der Gesellschaft"
+    ],
+    "TA_007": [
+        "Date de constitution",
+        "Gründungsdatum",
+        "Einrichtungsdatum"
+    ],
+    "TA_008": [
+        "Durée",
+        "Dauer der Gesellschaft"
+    ],
+    "TA_009": [
+        "Exercice social",
+        "Geschäftsjahr"
+    ],
+    "TA_010_1": [
+        "associé(s)",
+        "Teilhaber",
+        "Teilhaber der Gesellschaft"
+    ],
+    "TA_011_A": [
+        "Administrateur(s) / Gérant(s)",
+        "Vorstandsmitglied(er) / Geschäftsführer",
+        "Verwaltungsratsmitglied(er) / Geschäftsführer",
+        "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+    ],
+    "TA_012_A": [
+        "Délégué(s) à la gestion journalière",
+        "Nouveau délégué à la gestion journalière",
+        "tägliche Geschäftsführung",
+        "tägliche Geschäftsführer",
+        "Täglicher Geschäftsführer",
+        "Täglich(er) Geschäftsführer"
+    ],
+    "TA_013": [
+        "Rechnungskommissar",
+        "kommissar",
+        "Commissaire(s)",
+        "Réviseur(s) d'entreprise",
+        "Nouvelle personne chargée du contrôle des comptes",
+        "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+        "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+        "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+    ],
+    "TA_015_A": [
+        "Liquidation volontaire",
+        "liquidateur"
+    ],
+    "TA_017": [
+        "associé solidaire"
+    ],
+    "TA_020": [
+        "Associé commandité",
+        "Komplementär"
+    ],
+    "TA_021_A": [
+        "gérant",
+        "Geschäftsführer"
+    ],
+    "TA_022": [
+        "Authorisation(s)",
+        "Autorisation(s) d'établissement",
+        "Niederlassungsgenehmigung(en)"
+    ],
+    "TA_023": [
+        "Kontakt-E-Mail-Adresse",
+        "Adresse e-mail de contact"
+    ],
+    "TA_024_A": [
+        "Président / directeur(s)",
+        "Vorsitzender / Direktor(en)"
+    ],
+    "TA_018_A": [
+        "Directeur général / Comité de direction",
+        "Generaldirektor / Vorstand"
+    ],
+    "TA_026_A": [
+        "Dépositaire (Art. LSC)",
+        "Depositar (Art. LSC)"
+    ],
+    "TA_027": [
+        "Code NACE",
+        "Nouveau Code NACE"
+    ]
+}

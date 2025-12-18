@@ -1,0 +1,3341 @@
+[
+    {
+        "dp_id": "DP_003",
+        "standard_name": "Entity_BusinessName",
+        "field_name": [
+            "Dénomination",
+            "Dénomination ou raison sociale",
+            "Bezeichnung der Gesellschaft oder Firmenname",
+            "Bezeichnung"
+        ],
+        "section": [
+            "Dénomination",
+            "Dénomination ou raison sociale",
+            "Bezeichnung der Gesellschaft oder Firmenname",
+            "Bezeichnung"
+        ]
+    },
+    {
+        "dp_id": "DP_502",
+        "standard_name": "Entity_AbbreviationOfBusinessName",
+        "field_name": [
+            "Le cas échéant, abréviation utilisée",
+            "Allgemeinübliche Abkürzung",
+            "Allgemeinübliche Abkürzung (ggf.)"
+        ],
+        "section": [
+            "Dénomination",
+            "Dénomination ou raison sociale",
+            "Bezeichnung der Gesellschaft oder Firmenname",
+            "Bezeichnung"
+        ]
+    },
+    {
+        "dp_id": "DP_504",
+        "standard_name": "Entity_LegalForm",
+        "field_name": [
+            "Forme juridique",
+            "Rechtsform"
+        ],
+        "section": [
+            "Forme juridique",
+            "Rechtsform"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_518",
+        "standard_name": "Entity_AdditionalMention",
+        "field_name": [
+            "Mention supplémentaire",
+            "Mention supplémentaire (le cas échéant)",
+            "Zusätzliche Angaben (gegebenenfalls)",
+            "Zusätzliche Angaben",
+            "Zusätzliche Angabe"
+        ],
+        "section": [
+            "Forme juridique",
+            "Rechtsform"
+        ]
+    },
+    {
+        "dp_id": "DP_509",
+        "standard_name": "Entity_BuildingNumber",
+        "field_name": [
+            "Numéro",
+            "Hausnummer"
+        ],
+        "section": [
+            "Siège social",
+            "Sitz der Gesellschaft"
+        ]
+    },
+    {
+        "dp_id": "DP_510",
+        "standard_name": "Entity_Street",
+        "field_name": [
+            "Rue",
+            "Rue (Veuillez indiquer le nom complet de la rue comme par exemple : Rue de la gare)",
+            "Strasse",
+            "Strasse : (Bitte geben Sie den vollständigen Namen der Strasse an, wie z.B.: Rue de la Gare)"
+        ],
+        "section": [
+            "Siège social",
+            "Sitz der Gesellschaft"
+        ]
+    },
+    {
+        "dp_id": "DP_511",
+        "standard_name": "Entity_Postcode",
+        "field_name": [
+            "Code postal",
+            "Postleitzahl"
+        ],
+        "section": [
+            "Siège social",
+            "Sitz der Gesellschaft"
+        ]
+    },
+    {
+        "dp_id": "DP_512",
+        "standard_name": "Entity_City",
+        "field_name": [
+            "Localité",
+            "Ortschaft"
+        ],
+        "section": [
+            "Siège social",
+            "Sitz der Gesellschaft"
+        ]
+    },
+    {
+        "dp_id": "DP_566",
+        "standard_name": "Entity_Address",
+        "field_name": [
+            "Siège social",
+            "Sitz der Gesellschaft"
+        ],
+        "section": [
+            "Siège social",
+            "Sitz der Gesellschaft"
+        ]
+    },
+    {
+        "dp_id": "DP_055",
+        "standard_name": "Entity_SocialObject",
+        "field_name": [
+            "Objet",
+            "Objet social",
+            "Objet social (indication)",
+            "Objet (indication)",
+            "Zweck der Gesellschaft (Kurzfassung)",
+            "Zweck (Kurzfassung)"
+        ],
+        "section": [
+            "Objet",
+            "Objet social",
+            "Zweck der Gesellschaft",
+            "Zweck"
+        ]
+    },
+    {
+        "dp_id": "DP_056",
+        "standard_name": "Entity_SocialObjectCompleteVsIncomplete",
+        "field_name": [
+            "Objet incomplet",
+            "Objet social incomplet",
+            "Unvollständiger Zweck der Gesellschaft",
+            "Unvollständiger Zweck"
+        ],
+        "section": [
+            "Objet",
+            "Objet social",
+            "Zweck der Gesellschaft",
+            "Zweck"
+        ]
+    },
+    {
+        "dp_id": "DP_051",
+        "standard_name": "Entity_TypeOfCapital",
+        "field_name": [
+            "Type",
+            "Art"
+        ],
+        "section": [
+            "Capital social / Fonds social",
+            "Gesellschaftskapital",
+            "Kapital der Gesellschaft"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_053",
+        "standard_name": "Entity_CapitalAmount",
+        "field_name": [
+            "Montant",
+            "Betrag",
+            "Kapitalbetrag"
+        ],
+        "section": [
+            "Capital social / Fonds social",
+            "Gesellschaftskapital",
+            "Kapital der Gesellschaft"
+        ]
+    },
+    {
+        "dp_id": "DP_054",
+        "standard_name": "Entity_Denomination",
+        "field_name": [
+            "Devise",
+            "Währung",
+            "Kapitaldevise"
+        ],
+        "section": [
+            "Capital social / Fonds social",
+            "Gesellschaftskapital",
+            "Kapital der Gesellschaft"
+        ]
+    },
+    {
+        "dp_id": "DP_057",
+        "standard_name": "Entity_ContributionType",
+        "field_name": [
+            "Etat de libération",
+            "Einzahlungsstand",
+            "Einzahlungsstand des gezeichneten Gesellschaftskapitals",
+            "Einzahlungsstand des gezeichneten Gesellschäftskapitals"
+        ],
+        "section": [
+            "Capital social / Fonds social",
+            "Gesellschaftskapital",
+            "Kapital der Gesellschaft"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_059",
+        "standard_name": "Entity_ContributionPercentage",
+        "field_name": [
+            "Pourcentage, le cas échéant",
+            "Prozentsatz (gegebenenfalls)",
+            "Prozentsatz des Einzahlungsstandes"
+        ],
+        "section": [
+            "Capital social / Fonds social",
+            "Gesellschaftskapital",
+            "Kapital der Gesellschaft"
+        ]
+    },
+    {
+        "dp_id": "DP_001",
+        "standard_name": "Entity_IncorporationDate",
+        "field_name": [
+            "Date de constitution",
+            "Gründungsdatum",
+            "Einrichtungsdatum",
+            "Datum der Gründungsurkunde",
+            "Datum der Gründungsurkund"
+        ],
+        "section": [
+            "Date de constitution",
+            "Gründungsdatum",
+            "Einrichtungsdatum",
+            "Datum der Gründungsurkunde",
+            "Datum der Gründungsurkund"
+        ]
+    },
+    {
+        "dp_id": "DP_002",
+        "standard_name": "Entity_Duration",
+        "field_name": [
+            "Durée",
+            "Dauer der Gesellschaft"
+        ],
+        "section": [
+            "Durée",
+            "Dauer der Gesellschaft"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_005",
+        "standard_name": "Entity_DurationEndDate",
+        "field_name": [
+            "Date de fin",
+            "Enddatum",
+            "Ende der Gesellschaft"
+        ],
+        "section": [
+            "Durée",
+            "Dauer der Gesellschaft"
+        ]
+    },
+    {
+        "dp_id": "DP_006",
+        "standard_name": "Entity_FirstFinancialPeriodFrom",
+        "field_name": [
+            "Du",
+            "Von"
+        ],
+        "section": [
+            "Premier exercice ou exercice raccourci",
+            "Erstes Geschäftsjahr oder abgekürztes Geschäftsjahr"
+        ]
+    },
+    {
+        "dp_id": "DP_007",
+        "standard_name": "Entity_FirstFinancialPeriodTo",
+        "field_name": [
+            "Au",
+            "Bis"
+        ],
+        "section": [
+            "Premier exercice ou exercice raccourci",
+            "Erstes Geschäftsjahr oder abgekürztes Geschäftsjahr"
+        ]
+    },
+    {
+        "dp_id": "DP_008",
+        "standard_name": "Entity_FiscalYearFrom",
+        "field_name": [
+            "Du",
+            "Von"
+        ],
+        "section": [
+            "Exercice social",
+            "Geschäftsjahr"
+        ]
+    },
+    {
+        "dp_id": "DP_009",
+        "standard_name": "Entity_FiscalYearTo",
+        "field_name": [
+            "Au",
+            "Bis"
+        ],
+        "section": [
+            "Exercice social",
+            "Geschäftsjahr"
+        ]
+    },
+    {
+        "dp_id": "DP_524",
+        "standard_name": "Shareholder_Country",
+        "field_name": [
+            "Pays",
+            "Land"
+        ],
+        "section": [
+            "Personne morale étrangère",
+            "Person ausländischen Rechts"
+        ]
+    },
+    {
+        "dp_id": "DP_526",
+        "standard_name": "ShareholderNonLu_LegalForm",
+        "field_name": [
+            "Forme juridique",
+            "Forme juridique étrangère",
+            "Ausländische Rechtsform"
+        ],
+        "section": [
+            "Personne morale étrangère",
+            "Person ausländischen Rechts"
+        ]
+    },
+    {
+        "dp_id": "DP_527",
+        "standard_name": "ShareholderNonLu_NameOfRegistry",
+        "field_name": [
+            "Nom du registre",
+            "Handelsregisterbezeichnung"
+        ],
+        "section": [
+            "Personne morale étrangère",
+            "Person ausländischen Rechts"
+        ]
+    },
+    {
+        "dp_id": "DP_528",
+        "standard_name": "ShareholderNonLu_LegalName",
+        "field_name": [
+            "Dénomination",
+            "Dénomination ou raison sociale",
+            "Bezeichnung der Gesellschaft oder Firmenname"
+        ],
+        "section": [
+            "Personne morale étrangère",
+            "Person ausländischen Rechts"
+        ]
+    },
+    {
+        "dp_id": "DP_680",
+        "standard_name": "NonLuPerson_Address",
+        "field_name": [
+            "Siège social",
+            "Sitz der Gesellschaft",
+            "Siège",
+            "Sitz"
+        ],
+        "section": [
+            "Personne morale étrangère",
+            "Person ausländischen Rechts"
+        ]
+    },
+    {
+        "dp_id": "DP_519",
+        "standard_name": "Shareholder_Type",
+        "field_name": [
+            "Type de personne",
+            "Type de personne_backup",
+            "Art der Person"
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_536",
+        "standard_name": "Shareholder_LastName(s)",
+        "field_name": [
+            "Nom",
+            "Name"
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft",
+            "Nouvel associé solidaire",
+            "Neuer Komplementär",
+            "Associé(s) commandité(s)"
+        ]
+    },
+    {
+        "dp_id": "DP_537",
+        "standard_name": "Shareholder_FirstName(s)",
+        "field_name": [
+            "Prénom(s)",
+            "Vorname",
+            "Vorname(n)"
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft",
+            "Nouvel associé solidaire",
+            "Neuer Komplementär",
+            "Associé(s) commandité(s)"
+        ]
+    },
+    {
+        "dp_id": "DP_540",
+        "standard_name": "Shareholder_DateOfBirth",
+        "field_name": [
+            "Date de naissance",
+            "Geburtsdatum"
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft",
+            "Nouvel associé solidaire",
+            "Neuer Komplementär",
+            "Associé(s) commandité(s)"
+        ]
+    },
+    {
+        "dp_id": "DP_541",
+        "standard_name": "Shareholder_PlaceOfBirth",
+        "field_name": [
+            "Lieu de naissance",
+            "Geburtsort"
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft",
+            "Nouvel associé solidaire",
+            "Neuer Komplementär",
+            "Associé(s) commandité(s)"
+        ]
+    },
+    {
+        "dp_id": "DP_542",
+        "standard_name": "Shareholder_CountryOfBirth",
+        "field_name": [
+            "Pays de naissance",
+            "Geburtsland"
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft",
+            "Nouvel associé solidaire",
+            "Neuer Komplementär",
+            "Associé(s) commandité(s)"
+        ]
+    },
+    {
+        "dp_id": "DP_529",
+        "standard_name": "Shareholder_BuildingNumber",
+        "field_name": [
+            "Numéro",
+            "Hausnummer"
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft",
+            "Nouvel associé solidaire",
+            "Neuer Komplementär",
+            "Associé(s) commandité(s)"
+        ]
+    },
+    {
+        "dp_id": "DP_530",
+        "standard_name": "Shareholder_BuildingName",
+        "field_name": [
+            "Bâtiment",
+            "Gebäude"
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft",
+            "Nouvel associé solidaire",
+            "Neuer Komplementär",
+            "Associé(s) commandité(s)"
+        ]
+    },
+    {
+        "dp_id": "DP_531",
+        "standard_name": "Shareholder_PostCode",
+        "field_name": [
+            "Code Postal",
+            "Postleitzahl"
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft",
+            "Nouvel associé solidaire",
+            "Neuer Komplementär",
+            "Associé(s) commandité(s)"
+        ]
+    },
+    {
+        "dp_id": "DP_532",
+        "standard_name": "Shareholder_City",
+        "field_name": [
+            "Localité",
+            "Ortschaft"
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft",
+            "Nouvel associé solidaire",
+            "Neuer Komplementär",
+            "Associé(s) commandité(s)"
+        ]
+    },
+    {
+        "dp_id": "DP_533",
+        "standard_name": "Shareholder_StreetName",
+        "field_name": [
+            "Rue",
+            "Rue (Veuillez indiquer le nom complet de la rue comme par exemple : Rue de la gare)",
+            "Strasse : (Bitte geben Sie den vollständigen Namen der Strasse an, wie z.B.: Rue de la Gare)",
+            "Strasse"
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft",
+            "Nouvel associé solidaire",
+            "Neuer Komplementär",
+            "Associé(s) commandité(s)"
+        ]
+    },
+    {
+        "dp_id": "DP_534",
+        "standard_name": "Shareholder_Floor",
+        "field_name": [
+            "Etage",
+            "Stockwerk"
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft",
+            "Nouvel associé solidaire",
+            "Neuer Komplementär",
+            "Associé(s) commandité(s)"
+        ]
+    },
+    {
+        "dp_id": "DP_535",
+        "standard_name": "Shareholder_Country",
+        "field_name": [
+            "Pays",
+            "Land"
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft",
+            "Nouvel associé solidaire",
+            "Neuer Komplementär",
+            "Associé(s) commandité(s)"
+        ]
+    },
+    {
+        "dp_id": "DP_521",
+        "standard_name": "Shareholder_TypeOfShares",
+        "field_name": [
+            "Type de parts",
+            "Type(s) de parts (le cas échéant)",
+            "Art der Anteile",
+            "Art der Anteile (gegebenenfalls)"
+        ],
+        "section": [
+            "Parts sociales",
+            "Anteile"
+        ]
+    },
+    {
+        "dp_id": "DP_522",
+        "standard_name": "Shareholder_NumberOfSharesHeld",
+        "field_name": [
+            "Nombre de parts",
+            "Nombre de parts détenues",
+            "Anzahl der Anteile",
+            "Zahl der Anteile"
+        ],
+        "section": [
+            "Parts sociales",
+            "Anteile"
+        ]
+    },
+    {
+        "dp_id": "DP_520",
+        "standard_name": "Shareholder_RegistrationNumber",
+        "field_name": [
+            "N° d'immatriculation au RCS",
+            "N° d'immatriculation",
+            "Handelsregisternummer"
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft"
+        ]
+    },
+    {
+        "dp_id": "DP_538",
+        "standard_name": "Entity_SignatoryRegime",
+        "field_name": [
+            "Régime de signature statutaire",
+            "Régime de signature statutaire (indication)",
+            "Statutarische Gesellschaftszeichnungsberechtigung",
+            "Statutarische Gesellschaftszeichnungsberechtigung (Kurzfassung)"
+        ],
+        "section": [
+            "Régime de signature statutaire",
+            "Statutarische Gesellschaftszeichnungsberechtigung",
+            "Administrateur(s) / Gérant(s)",
+            "Vorstandsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "RDP_011",
+        "standard_name": "LastName(s)",
+        "field_name": [
+            "Nom",
+            "Name"
+        ],
+        "section": [
+            "Représentant permanent",
+            "Représentant permanent de la personne morale"
+        ]
+    },
+    {
+        "dp_id": "RDP_012",
+        "standard_name": "FirstName(s)",
+        "field_name": [
+            "Prénom(s)",
+            "Vorname",
+            "Vorname(n)"
+        ],
+        "section": [
+            "Représentant permanent",
+            "Représentant permanent de la personne morale"
+        ]
+    },
+    {
+        "dp_id": "RDP_013",
+        "standard_name": "DateOfBirth",
+        "field_name": [
+            "Date de naissance",
+            "Geburtsdatum"
+        ],
+        "section": [
+            "Représentant permanent",
+            "Représentant permanent de la personne morale"
+        ]
+    },
+    {
+        "dp_id": "RDP_014",
+        "standard_name": "PlaceOfBirth",
+        "field_name": [
+            "Lieu de naissance",
+            "Geburtsort"
+        ],
+        "section": [
+            "Représentant permanent",
+            "Représentant permanent de la personne morale"
+        ]
+    },
+    {
+        "dp_id": "RDP_015",
+        "standard_name": "CountryOfBirth",
+        "field_name": [
+            "Pays de naissance",
+            "Geburtsland"
+        ],
+        "section": [
+            "Représentant permanent",
+            "Représentant permanent de la personne morale"
+        ]
+    },
+    {
+        "dp_id": "RDP_032",
+        "standard_name": "Street",
+        "field_name": [
+            "Rue",
+            "Rue (Veuillez indiquer le nom complet de la rue comme par exemple : Rue de la gare)",
+            "Strasse : (Bitte geben Sie den vollständigen Namen der Strasse an, wie z.B.: Rue de la Gare)",
+            "Strasse"
+        ],
+        "section": [
+            "Représentant permanent",
+            "Représentant permanent de la personne morale"
+        ]
+    },
+    {
+        "dp_id": "RDP_033",
+        "standard_name": "BuildingNumber",
+        "field_name": [
+            "Numéro",
+            "Hausnummer"
+        ],
+        "section": [
+            "Représentant permanent",
+            "Représentant permanent de la personne morale"
+        ]
+    },
+    {
+        "dp_id": "RDP_034",
+        "standard_name": "BuildingName",
+        "field_name": [
+            "Bâtiment",
+            "Gebäude"
+        ],
+        "section": [
+            "Représentant permanent",
+            "Représentant permanent de la personne morale"
+        ]
+    },
+    {
+        "dp_id": "RDP_035",
+        "standard_name": "Floor",
+        "field_name": [
+            "Etage",
+            "Stockwerk"
+        ],
+        "section": [
+            "Représentant permanent",
+            "Représentant permanent de la personne morale"
+        ]
+    },
+    {
+        "dp_id": "RDP_036",
+        "standard_name": "PostCode",
+        "field_name": [
+            "Code Postal",
+            "Postleitzahl"
+        ],
+        "section": [
+            "Représentant permanent",
+            "Représentant permanent de la personne morale"
+        ]
+    },
+    {
+        "dp_id": "RDP_037",
+        "standard_name": "City",
+        "field_name": [
+            "Localité",
+            "Ortschaft"
+        ],
+        "section": [
+            "Représentant permanent",
+            "Représentant permanent de la personne morale"
+        ]
+    },
+    {
+        "dp_id": "RDP_038",
+        "standard_name": "Country",
+        "field_name": [
+            "Pays",
+            "Land"
+        ],
+        "section": [
+            "Représentant permanent",
+            "Représentant permanent de la personne morale"
+        ]
+    },
+    {
+        "dp_id": "RDP_565",
+        "standard_name": "FullProfessionalAddress",
+        "field_name": [
+            "Adresse privée ou professionnelle",
+            "Adresse privée ou professionnelle Organe social",
+            "Privatwohnsitz oder Geschäftsadresse",
+            "Privatwohnsitz oder Geschäftsadresse Geschäftsadresse"  
+        ],
+        "section": [
+            "Représentant permanent",
+            "Représentant permanent de la personne morale"
+        ]
+    },
+    {
+        "dp_id": "DP_046",
+        "standard_name": "Manager_Type",
+        "field_name": [
+            "Type de personne",
+            "Type de personne_backup",
+            "Art der Person"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_011",
+        "standard_name": "Manager_LastName(s)",
+        "field_name": [
+            "Nom",
+            "Name"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_012",
+        "standard_name": "Manager_FirstName(s)",
+        "field_name": [
+            "Prénom(s)",
+            "Vorname",
+            "Vorname(n)"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_013",
+        "standard_name": "Manager_DateOfBirth",
+        "field_name": [
+            "Date de naissance",
+            "Geburtsdatum"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_014",
+        "standard_name": "Manager_PlaceOfBirth",
+        "field_name": [
+            "Lieu de naissance",
+            "Geburtsort"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_015",
+        "standard_name": "Manager_CountryOfBirth",
+        "field_name": [
+            "Pays de naissance",
+            "Geburtsland"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_032",
+        "standard_name": "Manager_Street",
+        "field_name": [
+            "Rue",
+            "Rue (Veuillez indiquer le nom complet de la rue comme par exemple : Rue de la gare)",
+            "Strasse : (Bitte geben Sie den vollständigen Namen der Strasse an, wie z.B.: Rue de la Gare)",
+            "Strasse"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_033",
+        "standard_name": "Manager_BuildingNumber",
+        "field_name": [
+            "Numéro",
+            "Hausnummer"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_034",
+        "standard_name": "Manager_BuildingName",
+        "field_name": [
+            "Bâtiment",
+            "Gebäude"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_035",
+        "standard_name": "Manager_Floor",
+        "field_name": [
+            "Etage",
+            "Stockwerk"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_036",
+        "standard_name": "Manager_PostCode",
+        "field_name": [
+            "Code Postal",
+            "Postleitzahl"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_037",
+        "standard_name": "Manager_City",
+        "field_name": [
+            "Localité",
+            "Ortschaft"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_038",
+        "standard_name": "Manager_Country",
+        "field_name": [
+            "Pays",
+            "Land"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_565",
+        "standard_name": "Manager_FullProfessionalAddress",
+        "field_name": [
+            "Adresse privée ou professionnelle",
+            "Adresse privée ou professionnelle Organe social",
+            "Privatwohnsitz oder Geschäftsadresse",
+            "Privatwohnsitz oder Geschäftsadresse Geschäftsadresse"  
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_044",
+        "standard_name": "Manager_GoverningBodyName",
+        "field_name": [
+            "Organe",
+            "Organe social",
+            "Gesellschaftsorgan",
+            "Organ"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_045",
+        "standard_name": "Manager_FunctionOfTheManager",
+        "field_name": [
+            "Fonction",
+            "Amtsausführung"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_050",
+        "standard_name": "Manager_SigningAuthority",
+        "field_name": [
+            "Pouvoir de signature (indication)",
+            "Zeichnungsberechtigung (Kurzfassung)",
+            "Pouvoir de signature",
+            "Zeichnungsberechtigung"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_039",
+        "standard_name": "Manager_MandateDuration",
+        "field_name": [
+            "Durée du mandat",
+            "Dauer des Mandats"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_041",
+        "standard_name": "Manager_AppointmentOrRenewalDate",
+        "field_name": [
+            "Date de nomination",
+            "Bestellungsdatum"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_042",
+        "standard_name": "Manager_MandateExpirationDate",
+        "field_name": [
+            "Date d'expiration du mandat",
+            "Date de fin",
+            "Date de fin du mandat",
+            "Ablaufdatum des Mandats",
+            "Enddatum",
+            "End datum",
+            "bis zum"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_043",
+        "standard_name": "Manager_MandateExpirationAGMYear",
+        "field_name": [
+            "jusqu'à l'assemblée générale qui se tiendra en l'année",
+            "bis zum Jahr, in dem die Generalversammlung stattfinden wird",
+            "Année de fin",
+            "Année de fin du mandat",
+            "bis zur Generalversammlung im Jahre"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_060",
+        "standard_name": "Manager_RcsNumber",
+        "field_name": [
+            "N° d'immatriculation au RCS",
+            "N° d'immatriculation",
+            "Handelsregisternummer"
+        ],
+        "section": [
+            "Nouvel administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_040",
+        "standard_name": "Manager_PermanentRepresentative",
+        "field_name": [
+            "Représentée par"
+        ],
+        "section": [
+            "administrateur / gérant",
+            "Neues Vorstandsmitglied / Geschäftsführer", 
+            "Verwaltungsratsmitglied(er) / Geschäftsführer", 
+            "Neue Verwaltungsratsmitglied(er) / Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_068",
+        "standard_name": "EntityDailyManagementSignatoryRegime",
+        "field_name": [
+            "Régime de signature statutaire (indication)",
+            "Régime de signature statutaire",
+            "Statutarische Gesellschaftszeichnungsberechtigung",
+            "Statutarische Gesellschaftszeichnungsberechtigung (Kurzfassung)"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "TBC"
+        ]
+    },
+    {
+        "dp_id": "DP_061",
+        "standard_name": "Auditor_Type",
+        "field_name": [
+            "Type de personne",
+            "Type de personne_backup",
+            "Art der Person"
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_062",
+        "standard_name": "Auditor_RegistrationNumber",
+        "field_name": [
+            "N° d'immatriculation au RCS",
+            "N° d'immatriculation",
+            "Handelsregisternummer"
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_063",
+        "standard_name": "Auditor_TypeOfMandate",
+        "field_name": [
+            "Type de mandat",
+            "Art des Mandats"
+        ],
+        "section": [
+            "Type de mandat",
+            "Art des Mandats",
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_064",
+        "standard_name": "Auditor_AppointmentOrRenewalDate",
+        "field_name": [
+            "Date de nomination",
+            "Bestellungsdatum"
+        ],
+        "section": [
+            "Durée du mandat",
+            "Dauer des Mandats",
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_065",
+        "standard_name": "Auditor_MandateDuration",
+        "field_name": [
+            "Durée du mandat",
+            "Dauer des Mandats"
+        ],
+        "section": [
+            "Durée du mandat",
+            "Dauer des Mandats",
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_066",
+        "standard_name": "Auditor_MandateExpirationDate",
+        "field_name": [
+            "Date d'expiration du mandat",
+            "Date de fin",
+            "Date de fin du mandat",
+            "Ablaufdatum des Mandats"
+        ],
+        "section": [
+            "Durée du mandat",
+            "Dauer des Mandats",
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_067",
+        "standard_name": "Auditor_MandateExpirationAGMYear",
+        "field_name": [
+            "jusqu'à l'assemblée générale qui se tiendra en l'année",
+            "bis zum Jahr, in dem die Generalversammlung stattfinden wird",
+            "Année de fin",
+            "Année de fin du mandat",
+            "bis zur Generalversammlung im Jahre"
+        ],
+        "section": [
+            "Durée du mandat",
+            "Dauer des Mandats",
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_667",
+        "standard_name": "Auditor_LastName(s)",
+        "field_name": [
+            "Nom",
+            "Name"
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_668",
+        "standard_name": "Auditor_FirstName(s)",
+        "field_name": [
+            "Prénom(s)",
+            "Vorname",
+            "Vorname(n)"
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_669",
+        "standard_name": "Auditor_DateOfBirth",
+        "field_name": [
+            "Date de naissance",
+            "Geburtsdatum"
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_670",
+        "standard_name": "Auditor_PlaceOfBirth",
+        "field_name": [
+            "Lieu de naissance",
+            "Geburtsort"
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_671",
+        "standard_name": "Auditor_CountryOfBirth",
+        "field_name": [
+            "Pays de naissance",
+            "Geburtsland"
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_672",
+        "standard_name": "Auditor_Street",
+        "field_name": [
+            "Rue",
+            "Rue (Veuillez indiquer le nom complet de la rue comme par exemple : Rue de la gare)",
+            "Strasse : (Bitte geben Sie den vollständigen Namen der Strasse an, wie z.B.: Rue de la Gare)",
+            "Strasse"
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_673",
+        "standard_name": "Auditor_BuildingNumber",
+        "field_name": [
+            "Numéro",
+            "Hausnummer"
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_674",
+        "standard_name": "Auditor_BuildingName",
+        "field_name": [
+            "Bâtiment",
+            "Gebäude"
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_675",
+        "standard_name": "Auditor_Floor",
+        "field_name": [
+            "Etage",
+            "Stockwerk"
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_676",
+        "standard_name": "Auditor_PostCode",
+        "field_name": [
+            "Code Postal",
+            "Postleitzahl"
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_677",
+        "standard_name": "Auditor_City",
+        "field_name": [
+            "Localité",
+            "Ortschaft"
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_678",
+        "standard_name": "Auditor_Country",
+        "field_name": [
+            "Pays",
+            "Land"
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_679",
+        "standard_name": "Auditor_FullProfessionalAddress",
+        "field_name": [
+            "Adresse privée ou professionnelle",
+            "Adresse privée ou professionnelle Organe social",
+            "Privatwohnsitz oder Geschäftsadresse",
+            "Privatwohnsitz oder Geschäftsadresse Geschäftsadresse"  
+        ],
+        "section": [
+            "Commissaire(s)",
+            "Rechnungskommissar",
+            "kommissar",
+            "Réviseur(s) d'entreprise",
+            "Nouvelle personne chargée du contrôle des comptes",
+            "Neuer Prüfungsbeauftragter der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragte(r) der Geschäftsbuchführung",
+            "Neuer Prüfungsbeauftragt(er) der Geschäftsbuchführung"
+        ]
+    },
+    {
+        "dp_id": "DP_070",
+        "standard_name": "Partner_Type",
+        "field_name": [
+            "Type de personne",
+            "Type de personne_backup",
+            "Art der Person"
+        ],
+        "section": [
+            "Nouvel associé solidaire"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_071",
+        "standard_name": "Partner_RcsNumber",
+        "field_name": [
+            "N° d'immatriculation au RCS",
+            "N° d'immatriculation",
+            "Handelsregisternummer"
+        ],
+        "section": [
+            "Nouvel associé solidaire"
+        ]
+    },
+    {
+        "dp_id": "DP_080",
+        "standard_name": "GeneralManagerOrExecutiveCommitteeSignatoryRegime",
+        "field_name": [
+            "Régime de signature statutaire",
+            "Régime de signature statutaire (indication)",
+            "Statutarische Gesellschaftszeichnungsberechtigung",
+            "Statutarische Gesellschaftszeichnungsberechtigung (Kurzfassung)"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_081",
+        "standard_name": "GeneralPartner_Type",
+        "field_name": [
+            "Type de personne",
+            "Type de personne_backup"
+        ],
+        "section": [
+            "Associé(s) commandité(s)",
+            "Neuer Komplementär"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_082",
+        "standard_name": "GeneralPartner_RcsNumber",
+        "field_name": [
+            "N° d'immatriculation au RCS",
+            "N° d'immatriculation",
+            "Handelsregisternummer"
+        ],
+        "section": [
+            "Associé(s) commandité(s)",
+            "Neuer Komplementär"
+        ]
+    },
+    {
+        "dp_id": "DP_072",
+        "standard_name": "PartnershipManager_SignatureRegime",
+        "field_name": [
+            "Régime de signature statutaire",
+            "Régime de signature statutaire (indication)",
+            "Statutarische Gesellschaftszeichnungsberechtigung",
+            "Statutarische Gesellschaftszeichnungsberechtigung (Kurzfassung)"
+        ],
+        "section": [
+            "Gérant(s)",
+            "Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_073",
+        "standard_name": "PartnershipManager_Type",
+        "field_name": [
+            "Type de personne",
+            "Type de personne_backup"
+        ],
+        "section": [
+            "gérant",
+            "Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_074",
+        "standard_name": "PartnershipManager_RcsNumber",
+        "field_name": [
+            "N° d'immatriculation au RCS",
+            "N° d'immatriculation",
+            "Handelsregisternummer"
+        ],
+        "section": [
+            "gérant",
+            "Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_083",
+        "standard_name": "PartnershipManager_GoverningBodyName",
+        "field_name": [
+            "Organe",
+            "Organe social",
+            "Gesellschaftsorgan",
+            "Organ"
+        ],
+        "section": [
+            "gérant",
+            "Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_084",
+        "standard_name": "PartnershipManager_FunctionOfTheManager",
+        "field_name": [
+            "Fonction",
+            "Amtsausführung"
+        ],
+        "section": [
+            "gérant",
+            "Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_085",
+        "standard_name": "PartnershipManager_SigningAuthority",
+        "field_name": [
+            "Pouvoir de signature (indication)",
+            "Zeichnungsberechtigung (Kurzfassung)",
+            "Pouvoir de signature",
+            "Zeichnungsberechtigung"
+        ],
+        "section": [
+            "gérant",
+            "Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_086",
+        "standard_name": "PartnershipManager_MandateDuration",
+        "field_name": [
+            "Durée du mandat",
+            "Dauer des Mandats"
+        ],
+        "section": [
+            "gérant",
+            "Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_087",
+        "standard_name": "PartnershipManager_AppointmentOrRenewalDate",
+        "field_name": [
+            "Date de nomination",
+            "Bestellungsdatum"
+        ],
+        "section": [
+            "gérant",
+            "Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_088",
+        "standard_name": "PartnershipManager_MandateExpirationDate",
+        "field_name": [
+            "Date d'expiration du mandat",
+            "Date de fin",
+            "Date de fin du mandat",
+            "Ablaufdatum des Mandats"
+        ],
+        "section": [
+            "gérant",
+            "Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_089",
+        "standard_name": "PartnershipManager_MandateExpirationAGMYear",
+        "field_name": [
+            "jusqu'à l'assemblée générale qui se tiendra en l'année",
+            "bis zum Jahr, in dem die Generalversammlung stattfinden wird",
+            "Année de fin",
+            "Année de fin du mandat",
+            "bis zur Generalversammlung im Jahre"
+        ],
+        "section": [
+            "gérant",
+            "Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_076",
+        "standard_name": "Entity_AuthorisationID",
+        "field_name": [
+            "Numéro",
+            "Numéro d'autorisation",
+            "Nummer",
+            "Nummer der Niederlassungsgenehmigung"
+        ],
+        "section": [
+            "Authorisation(s)",
+            "Authorization(s)",
+            "Autorisation",
+            "Autorisation(s) d'établissement",
+            "Niederlassungsgenehmigung(en)",
+            "Handelsermächtigung(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_523",
+        "standard_name": "Liquidator_Type",
+        "field_name": [
+            "Type de personne",
+            "Type de personne_backup"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_568",
+        "standard_name": "Liquidator_RcsNumber",
+        "field_name": [
+            "N° d'immatriculation au RCS",
+            "N° d'immatriculation",
+            "Handelsregisternummer"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_545",
+        "standard_name": "Liquidator_LastName(s)",
+        "field_name": [
+            "Nom"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_546",
+        "standard_name": "Liquidator_FirstName(s)",
+        "field_name": [
+            "Prénom(s)"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_547",
+        "standard_name": "Liquidator_DateOfBirth",
+        "field_name": [
+            "Date de naissance"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_548",
+        "standard_name": "Liquidator_PlaceOfBirth",
+        "field_name": [
+            "Lieu de naissance"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_549",
+        "standard_name": "Liquidator_CountryOfBirth",
+        "field_name": [
+            "Pays de naissance"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_550",
+        "standard_name": "Liquidator_Street",
+        "field_name": [
+            "Rue"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_551",
+        "standard_name": "Liquidator_BuildingNumber",
+        "field_name": [
+            "Numéro"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_552",
+        "standard_name": "Liquidator_BuildingName",
+        "field_name": [
+            "Bâtiment"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_553",
+        "standard_name": "Liquidator_Floor",
+        "field_name": [
+            "Etage"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_554",
+        "standard_name": "Liquidator_PostCode",
+        "field_name": [
+            "Code Postal"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_555",
+        "standard_name": "Liquidator_City",
+        "field_name": [
+            "Localité"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_556",
+        "standard_name": "Liquidator_Country",
+        "field_name": [
+            "Pays"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_557",
+        "standard_name": "Liquidator_SignatureAuthority",
+        "field_name": [
+            "Pouvoir de signature (indication)"
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_558",
+        "standard_name": "LiquidationDecisionDate",
+        "field_name": [
+            "Date à laquelle la liquidation a été décidée"
+        ],
+        "section": [
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_559",
+        "standard_name": "Liquidator_GeneralPowers",
+        "field_name": [
+            "Pouvoir général (indication)"
+        ],
+        "section": [
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_078",
+        "standard_name": "ADMIN_EntityLegalType",
+        "field_name": [
+            "n/a"
+        ],
+        "section": []
+    },
+    {
+        "dp_id": "DP_052",
+        "standard_name": "Shareholder_ShareClassDelete",
+        "field_name": [
+            "Rayer",
+            "löschen"
+        ],
+        "section": [
+            "Parts sociales",
+            "Anteile"
+        ]
+    },
+    {
+        "dp_id": "DP_503",
+        "standard_name": "Deletion",
+        "field_name": [
+            "Rayer",
+            "löschen"
+        ],
+        "section": "all"
+    },
+    {
+        "dp_id": "DP_569",
+        "standard_name": "Resignation",
+        "field_name": [
+            "Démission",
+            "Démission de l'administrateur / gérant"
+        ],
+        "section": "all"
+    },
+    {
+        "dp_id": "DP_563",
+        "standard_name": "Entity_EmailAddress",
+        "field_name": [
+            "Kontakt-E-Mail-Adresse",
+            "Adresse e-mail de contact"
+        ],
+        "section": [
+            "Kontakt-E-Mail-Adresse",
+            "Adresse e-mail de contact"
+        ]
+    },
+    {
+        "dp_id": "DP_564",
+        "standard_name": "Shareholder_FullProfessionalAddress",
+        "field_name": [
+            "Adresse privée ou professionnelle",
+            "Adresse privée ou professionnelle Organe social",
+            "Privatwohnsitz oder Geschäftsadresse",
+            "Privatwohnsitz oder Geschäftsadresse Geschäftsadresse"  
+        ],
+        "section": [
+            "Nouvel associé",
+            "Neuer Teilhaber",
+            "Neuer Teilhaber der Gesellschaft"
+        ]
+    },
+    {
+        "dp_id": "DP_567",
+        "standard_name": "Liquidator_FullProfessionalAddress",
+        "field_name": [
+            "Adresse privée ou professionnelle",
+            "Adresse privée ou professionnelle Organe social",
+            "Privatwohnsitz oder Geschäftsadresse",
+            "Privatwohnsitz oder Geschäftsadresse Geschäftsadresse"  
+        ],
+        "section": [
+            "Nouveau liquidateur",
+            "Liquidation volontaire"
+        ]
+    },
+    {
+        "dp_id": "DP_570",
+        "standard_name": "President_Type",
+        "field_name": [
+            "Type de personne",
+            "Type de personne_backup",
+            "Art der Person"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_571",
+        "standard_name": "President_LastName(s)",
+        "field_name": [
+            "Nom",
+            "Name"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_572",
+        "standard_name": "President_FirstName(s)",
+        "field_name": [
+            "Prénom(s)",
+            "Vorname",
+            "Vorname(n)"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_573",
+        "standard_name": "President_DateOfBirth",
+        "field_name": [
+            "Date de naissance",
+            "Geburtsdatum"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_574",
+        "standard_name": "President_PlaceOfBirth",
+        "field_name": [
+            "Lieu de naissance",
+            "Geburtsort"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_575",
+        "standard_name": "President_CountryOfBirth",
+        "field_name": [
+            "Pays de naissance",
+            "Geburtsland"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_576",
+        "standard_name": "President_Street",
+        "field_name": [
+            "Rue",
+            "Rue (Veuillez indiquer le nom complet de la rue comme par exemple : Rue de la gare)",
+            "Strasse : (Bitte geben Sie den vollständigen Namen der Strasse an, wie z.B.: Rue de la Gare)",
+            "Strasse"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_577",
+        "standard_name": "President_BuildingNumber",
+        "field_name": [
+            "Numéro",
+            "Hausnummer"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_578",
+        "standard_name": "President_BuildingName",
+        "field_name": [
+            "Bâtiment",
+            "Gebäude"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_579",
+        "standard_name": "President_Floor",
+        "field_name": [
+            "Etage",
+            "Stockwerk"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_580",
+        "standard_name": "President_PostCode",
+        "field_name": [
+            "Code Postal",
+            "Postleitzahl"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_581",
+        "standard_name": "President_City",
+        "field_name": [
+            "Localité",
+            "Ortschaft"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_582",
+        "standard_name": "President_Country",
+        "field_name": [
+            "Pays",
+            "Land"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_583",
+        "standard_name": "President_GoverningBodyName",
+        "field_name": [
+            "Organe",
+            "Organe social",
+            "Gesellschaftsorgan",
+            "Organ"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_584",
+        "standard_name": "President_FunctionOfThePresident",
+        "field_name": [
+            "Fonction",
+            "Amtsausführung"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_585",
+        "standard_name": "President_SigningAuthority",
+        "field_name": [
+            "Pouvoir de signature (indication)",
+            "Zeichnungsberechtigung (Kurzfassung)",
+            "Pouvoir de signature",
+            "Zeichnungsberechtigung"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_586",
+        "standard_name": "President_MandateDuration",
+        "field_name": [
+            "Durée du mandat",
+            "Dauer des Mandats"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_587",
+        "standard_name": "President_AppointmentOrRenewalDate",
+        "field_name": [
+            "Date de nomination",
+            "Bestellungsdatum"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_588",
+        "standard_name": "President_MandateExpirationDate",
+        "field_name": [
+            "Date d'expiration du mandat",
+            "Date de fin",
+            "Date de fin du mandat",
+            "Ablaufdatum des Mandats"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_589",
+        "standard_name": "President_MandateExpirationAGMYear",
+        "field_name": [
+            "jusqu'à l'assemblée générale qui se tiendra en l'année",
+            "bis zum Jahr, in dem die Generalversammlung stattfinden wird",
+            "Année de fin",
+            "Année de fin du mandat",
+            "bis zur Generalversammlung im Jahre"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_590",
+        "standard_name": "President_RcsNumber",
+        "field_name": [
+            "N° d'immatriculation au RCS",
+            "N° d'immatriculation",
+            "Handelsregisternummer"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_591",
+        "standard_name": "President_PermanentRepresentative",
+        "field_name": [
+            "Représentée par"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_592",
+        "standard_name": "President_FullProfessionalAddress",
+        "field_name": [
+            "Adresse privée ou professionnelle",
+            "Adresse privée ou professionnelle Organe social",
+            "Privatwohnsitz oder Geschäftsadresse",
+            "Privatwohnsitz oder Geschäftsadresse Geschäftsadresse"  
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_594",
+        "standard_name": "SteeringCommittee_Type",
+        "field_name": [
+            "Type de personne",
+            "Type de personne_backup",
+            "Art der Person"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_595",
+        "standard_name": "SteeringCommittee_LastName(s)",
+        "field_name": [
+            "Nom",
+            "Name"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_596",
+        "standard_name": "SteeringCommittee_FirstName(s)",
+        "field_name": [
+            "Prénom(s)",
+            "Vorname",
+            "Vorname(n)"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_597",
+        "standard_name": "SteeringCommittee_DateOfBirth",
+        "field_name": [
+            "Date de naissance",
+            "Geburtsdatum"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_598",
+        "standard_name": "SteeringCommittee_PlaceOfBirth",
+        "field_name": [
+            "Lieu de naissance",
+            "Geburtsort"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_599",
+        "standard_name": "SteeringCommittee_CountryOfBirth",
+        "field_name": [
+            "Pays de naissance",
+            "Geburtsland"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_600",
+        "standard_name": "SteeringCommittee_Street",
+        "field_name": [
+            "Rue",
+            "Rue (Veuillez indiquer le nom complet de la rue comme par exemple : Rue de la gare)",
+            "Strasse : (Bitte geben Sie den vollständigen Namen der Strasse an, wie z.B.: Rue de la Gare)",
+            "Strasse"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_601",
+        "standard_name": "SteeringCommittee_BuildingNumber",
+        "field_name": [
+            "Numéro",
+            "Hausnummer"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_602",
+        "standard_name": "SteeringCommittee_BuildingName",
+        "field_name": [
+            "Bâtiment",
+            "Gebäude"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_603",
+        "standard_name": "SteeringCommittee_Floor",
+        "field_name": [
+            "Etage",
+            "Stockwerk"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_604",
+        "standard_name": "SteeringCommittee_PostCode",
+        "field_name": [
+            "Code Postal",
+            "Postleitzahl"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_605",
+        "standard_name": "SteeringCommittee_City",
+        "field_name": [
+            "Localité",
+            "Ortschaft"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_606",
+        "standard_name": "SteeringCommittee_Country",
+        "field_name": [
+            "Pays",
+            "Land"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_607",
+        "standard_name": "SteeringCommittee_GoverningBodyName",
+        "field_name": [
+            "Organe",
+            "Organe social",
+            "Gesellschaftsorgan",
+            "Organ"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_608",
+        "standard_name": "SteeringCommittee_FunctionOfTheSteeringCommittee",
+        "field_name": [
+            "Fonction",
+            "Amtsausführung"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_609",
+        "standard_name": "SteeringCommittee_SigningAuthority",
+        "field_name": [
+            "Pouvoir de signature (indication)",
+            "Zeichnungsberechtigung (Kurzfassung)",
+            "Pouvoir de signature",
+            "Zeichnungsberechtigung"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_610",
+        "standard_name": "SteeringCommittee_MandateDuration",
+        "field_name": [
+            "Durée du mandat",
+            "Dauer des Mandats"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_611",
+        "standard_name": "SteeringCommittee_AppointmentOrRenewalDate",
+        "field_name": [
+            "Date de nomination",
+            "Bestellungsdatum"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_612",
+        "standard_name": "SteeringCommittee_MandateExpirationDate",
+        "field_name": [
+            "Date d'expiration du mandat",
+            "Date de fin",
+            "Date de fin du mandat",
+            "Ablaufdatum des Mandats"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_613",
+        "standard_name": "SteeringCommittee_MandateExpirationAGMYear",
+        "field_name": [
+            "jusqu'à l'assemblée générale qui se tiendra en l'année",
+            "bis zum Jahr, in dem die Generalversammlung stattfinden wird",
+            "Année de fin",
+            "Année de fin du mandat",
+            "bis zur Generalversammlung im Jahre"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_614",
+        "standard_name": "SteeringCommittee_RcsNumber",
+        "field_name": [
+            "N° d'immatriculation au RCS",
+            "N° d'immatriculation",
+            "Handelsregisternummer"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_615",
+        "standard_name": "SteeringCommittee_PermanentRepresentative",
+        "field_name": [
+            "Représentée par"
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_616",
+        "standard_name": "SteeringCommittee_FullProfessionalAddress",
+        "field_name": [
+            "Adresse privée ou professionnelle",
+            "Adresse privée ou professionnelle Organe social",
+            "Privatwohnsitz oder Geschäftsadresse",
+            "Privatwohnsitz oder Geschäftsadresse Geschäftsadresse"  
+        ],
+        "section": [
+            "Directeur général / Comité de direction",
+            "Generaldirektor / Vorstand"
+        ]
+    },
+    {
+        "dp_id": "DP_642",
+        "standard_name": "Depositary_Type",
+        "field_name": [
+            "Type de personne",
+            "Type de personne_backup",
+            "Art der Person"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_643",
+        "standard_name": "Depositary_LastName(s)",
+        "field_name": [
+            "Nom",
+            "Name"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_644",
+        "standard_name": "Depositary_FirstName(s)",
+        "field_name": [
+            "Prénom(s)",
+            "Vorname",
+            "Vorname(n)"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_645",
+        "standard_name": "Depositary_DateOfBirth",
+        "field_name": [
+            "Date de naissance",
+            "Geburtsdatum"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_646",
+        "standard_name": "Depositary_PlaceOfBirth",
+        "field_name": [
+            "Lieu de naissance",
+            "Geburtsort"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_647",
+        "standard_name": "Depositary_CountryOfBirth",
+        "field_name": [
+            "Pays de naissance",
+            "Geburtsland"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_648",
+        "standard_name": "Depositary_Street",
+        "field_name": [
+            "Rue",
+            "Rue (Veuillez indiquer le nom complet de la rue comme par exemple : Rue de la gare)",
+            "Strasse : (Bitte geben Sie den vollständigen Namen der Strasse an, wie z.B.: Rue de la Gare)",
+            "Strasse"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_649",
+        "standard_name": "Depositary_BuildingNumber",
+        "field_name": [
+            "Numéro",
+            "Hausnummer"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_650",
+        "standard_name": "Depositary_BuildingName",
+        "field_name": [
+            "Bâtiment",
+            "Gebäude"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_651",
+        "standard_name": "Depositary_Floor",
+        "field_name": [
+            "Etage",
+            "Stockwerk"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_652",
+        "standard_name": "Depositary_PostCode",
+        "field_name": [
+            "Code Postal",
+            "Postleitzahl"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_653",
+        "standard_name": "Depositary_City",
+        "field_name": [
+            "Localité",
+            "Ortschaft"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_654",
+        "standard_name": "Depositary_Country",
+        "field_name": [
+            "Pays",
+            "Land"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_655",
+        "standard_name": "Depositary_GoverningBodyName",
+        "field_name": [
+            "Organe",
+            "Organe social",
+            "Gesellschaftsorgan",
+            "Organ"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_656",
+        "standard_name": "Depositary_FunctionOfTheDepositary",
+        "field_name": [
+            "Fonction",
+            "Amtsausführung"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_657",
+        "standard_name": "Depositary_SigningAuthority",
+        "field_name": [
+            "Pouvoir de signature (indication)",
+            "Zeichnungsberechtigung (Kurzfassung)",
+            "Pouvoir de signature",
+            "Zeichnungsberechtigung"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_658",
+        "standard_name": "Depositary_MandateDuration",
+        "field_name": [
+            "Durée du mandat",
+            "Dauer des Mandats"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_659",
+        "standard_name": "Depositary_AppointmentOrRenewalDate",
+        "field_name": [
+            "Date de nomination",
+            "Bestellungsdatum"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_660",
+        "standard_name": "Depositary_MandateExpirationDate",
+        "field_name": [
+            "Date d'expiration du mandat",
+            "Date de fin",
+            "Date de fin du mandat",
+            "Ablaufdatum des Mandats"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_661",
+        "standard_name": "Depositary_MandateExpirationAGMYear",
+        "field_name": [
+            "jusqu'à l'assemblée générale qui se tiendra en l'année",
+            "bis zum Jahr, in dem die Generalversammlung stattfinden wird",
+            "Année de fin",
+            "Année de fin du mandat",
+            "bis zur Generalversammlung im Jahre"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_662",
+        "standard_name": "Depositary_RcsNumber",
+        "field_name": [
+            "N° d'immatriculation au RCS",
+            "N° d'immatriculation",
+            "Handelsregisternummer"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_663",
+        "standard_name": "Depositary_PermanentRepresentative",
+        "field_name": [
+            "Représentée par"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_664",
+        "standard_name": "Depositary_FullProfessionalAddress",
+        "field_name": [
+            "Adresse privée ou professionnelle",
+            "Adresse privée ou professionnelle Organe social",
+            "Privatwohnsitz oder Geschäftsadresse",
+            "Privatwohnsitz oder Geschäftsadresse Geschäftsadresse"  
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_593",
+        "standard_name": "President_SignatoryRegime",
+        "field_name": [
+            "Régime de signature statutaire",
+            "Régime de signature statutaire (indication)",
+            "Statutarische Gesellschaftszeichnungsberechtigung",
+            "Statutarische Gesellschaftszeichnungsberechtigung (Kurzfassung)"
+        ],
+        "section": [
+            "Président / directeur(s)",
+            "Vorsitzender / Direktor(en)"
+        ]
+    },
+    {
+        "dp_id": "DP_665",
+        "standard_name": "Depositary_SignatoryRegime",
+        "field_name": [
+            "Régime de signature statutaire",
+            "Régime de signature statutaire (indication)",
+            "Statutarische Gesellschaftszeichnungsberechtigung",
+            "Statutarische Gesellschaftszeichnungsberechtigung (Kurzfassung)"
+        ],
+        "section": [
+            "Dépositaire (Art. LSC)",
+            "Depositar (Art. LSC)"
+        ]
+    },
+    {
+        "dp_id": "DP_666",
+        "standard_name": "Code NACE",
+        "field_name": [
+            "Code NACE",
+            "Nouveau Code NACE"
+        ],
+        "section": [
+            "Code NACE",
+            "Nouveau Code NACE"
+        ]
+    },
+    {
+        "dp_id": "DP_681",
+        "standard_name": "Manager_Type",
+        "field_name": [
+            "Type de personne",
+            "Type de personne_backup",
+            "Art der Person"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_682",
+        "standard_name": "Manager_LastName(s)",
+        "field_name": [
+            "Nom",
+            "Name"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_683",
+        "standard_name": "Manager_FirstName(s)",
+        "field_name": [
+            "Prénom(s)",
+            "Vorname",
+            "Vorname(n)"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_684",
+        "standard_name": "Manager_DateOfBirth",
+        "field_name": [
+            "Date de naissance",
+            "Geburtsdatum"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_685",
+        "standard_name": "Manager_PlaceOfBirth",
+        "field_name": [
+            "Lieu de naissance",
+            "Geburtsort"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_686",
+        "standard_name": "Manager_CountryOfBirth",
+        "field_name": [
+            "Pays de naissance",
+            "Geburtsland"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_687",
+        "standard_name": "Manager_Street",
+        "field_name": [
+            "Rue",
+            "Rue (Veuillez indiquer le nom complet de la rue comme par exemple : Rue de la gare)",
+            "Strasse : (Bitte geben Sie den vollständigen Namen der Strasse an, wie z.B.: Rue de la Gare)",
+            "Strasse"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_688",
+        "standard_name": "Manager_BuildingNumber",
+        "field_name": [
+            "Numéro",
+            "Hausnummer"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_689",
+        "standard_name": "Manager_BuildingName",
+        "field_name": [
+            "Bâtiment",
+            "Gebäude"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_690",
+        "standard_name": "Manager_Floor",
+        "field_name": [
+            "Etage",
+            "Stockwerk"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_691",
+        "standard_name": "Manager_PostCode",
+        "field_name": [
+            "Code Postal",
+            "Postleitzahl"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_692",
+        "standard_name": "Manager_City",
+        "field_name": [
+            "Localité",
+            "Ortschaft"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_693",
+        "standard_name": "Manager_Country",
+        "field_name": [
+            "Pays",
+            "Land"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_694",
+        "standard_name": "Manager_FullProfessionalAddress",
+        "field_name": [
+            "Adresse privée ou professionnelle",
+            "Adresse privée ou professionnelle Organe social",
+            "Privatwohnsitz oder Geschäftsadresse",
+            "Privatwohnsitz oder Geschäftsadresse Geschäftsadresse"  
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_695",
+        "standard_name": "Manager_GoverningBodyName",
+        "field_name": [
+            "Organe",
+            "Organe social",
+            "Gesellschaftsorgan",
+            "Organ"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_696",
+        "standard_name": "Manager_FunctionOfTheManager",
+        "field_name": [
+            "Fonction",
+            "Amtsausführung"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_697",
+        "standard_name": "Manager_SigningAuthority",
+        "field_name": [
+            "Pouvoir de signature (indication)",
+            "Zeichnungsberechtigung (Kurzfassung)",
+            "Pouvoir de signature",
+            "Zeichnungsberechtigung"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_698",
+        "standard_name": "Manager_MandateDuration",
+        "field_name": [
+            "Durée du mandat",
+            "Dauer des Mandats"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ],
+        "comment": "standard values, we extract and fuzzy match with values in DB table. IF new, add to DB table"
+    },
+    {
+        "dp_id": "DP_699",
+        "standard_name": "Manager_AppointmentOrRenewalDate",
+        "field_name": [
+            "Date de nomination",
+            "Bestellungsdatum"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_700",
+        "standard_name": "Manager_MandateExpirationDate",
+        "field_name": [
+            "Date d'expiration du mandat",
+            "Date de fin",
+            "Date de fin du mandat",
+            "Ablaufdatum des Mandats"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_701",
+        "standard_name": "Manager_MandateExpirationAGMYear",
+        "field_name": [
+            "jusqu'à l'assemblée générale qui se tiendra en l'année",
+            "bis zum Jahr, in dem die Generalversammlung stattfinden wird",
+            "Année de fin",
+            "Année de fin du mandat",
+            "bis zur Generalversammlung im Jahre"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_702",
+        "standard_name": "Manager_RcsNumber",
+        "field_name": [
+            "N° d'immatriculation au RCS",
+            "N° d'immatriculation",
+            "Handelsregisternummer"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    },
+    {
+        "dp_id": "DP_703",
+        "standard_name": "Manager_PermanentRepresentative",
+        "field_name": [
+            "Représentée par"
+        ],
+        "section": [
+            "Délégué(s) à la gestion journalière",
+            "Nouveau délégué à la gestion journalière",
+            "tägliche Geschäftsführung",
+            "tägliche Geschäftsführer",
+            "Täglicher Geschäftsführer",
+            "Täglich(er) Geschäftsführer"
+        ]
+    }
+]

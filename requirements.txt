@@ -1,0 +1,22 @@
+# Core dependencies
+fastapi==0.115.0
+uvicorn[standard]==0.32.1
+python-multipart==0.0.12
+pydantic==2.9.2
+requests==2.32.3
+
+# PDF processing
+PyMuPDF==1.25.2
+
+# Text processing
+regex==2024.11.6
+
+# Numerical operations
+numpy==2.2.2
+
+# Multiprocessing
+billiard==4.2.1
+
+# Utilities
+shortuuid==1.0.13
+
