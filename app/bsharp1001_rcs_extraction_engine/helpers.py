@@ -172,7 +172,6 @@ class extractedForm:
                         elif self.fieldExists(mapping['field_name'], field_name_in_form) and self.extractedExistsinDefined(mapping['section'], owner_type):
                             data_mapping = mapping
                             break
-
                 else:
                     for mapping in self.data_mapping:
                         if self.fieldExists(mapping['field_name'], field_name_in_form) and self.extractedExistsinDefined(mapping['section'], parent_section):

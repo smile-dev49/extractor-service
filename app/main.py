@@ -484,6 +484,113 @@ def process_pdf_from_url(pdf_url: str, rcs_number: str = None, filing_id: str = 
         return (pdf_url, None, f"failed processing... extracted: {extracted}, Exception: {str(error)}")
 
 
+def _extract_pdfs_from_documents(documents, rcs_number, scraper_url, identifier_type="job", identifier_value=""):
+    """
+    Helper function to extract PDFs from a documents list.
+    Shared by both job_id and rcs_number endpoints.
+    """
+    if not documents:
+        return {
+            "status": "error",
+            "error": "No documents found"
+        }
+    
+    logger.info(f"Found {len(documents)} documents to extract for {identifier_type} {identifier_value}")
+    
+    # Extract data from each PDF using URLs directly
+    results = []
+    successful = 0
+    failed = 0
+    
+    for doc in documents:
+        pdf_url = doc.get("pdf_path")
+        deposit_number = doc.get("deposit_number")
+        filing_id = doc.get("filing_id")
+        
+        if not pdf_url:
+            logger.warning(f"No PDF URL for document {deposit_number}")
+            failed += 1
+            results.append({
+                "deposit_number": deposit_number,
+                "status": "error",
+                "error": "No PDF URL"
+            })
+            continue
+        
+        # Fix PDF URL if it points to wrong host/port
+        # Replace any host:port in the PDF URL with the scraper service URL
+        try:
+            parsed_pdf = urlparse(pdf_url)
+            parsed_scraper = urlparse(scraper_url)
+            
+            # If PDF URL has different host/port than scraper service, replace it
+            if parsed_pdf.netloc != parsed_scraper.netloc:
+                logger.info(f"Replacing PDF URL host from {parsed_pdf.netloc} to {parsed_scraper.netloc}")
+                # Reconstruct URL with scraper service host/port
+                pdf_url = urlunparse((
+                    parsed_scraper.scheme,  # Use scraper service scheme
+                    parsed_scraper.netloc,  # Use scraper service host:port
+                    parsed_pdf.path,        # Keep original path
+                    parsed_pdf.params,      # Keep original params
+                    parsed_pdf.query,       # Keep original query
+                    parsed_pdf.fragment     # Keep original fragment
+                ))
+                logger.info(f"Updated PDF URL: {pdf_url}")
+        except Exception as e:
+            logger.warning(f"Could not parse/fix PDF URL {pdf_url}: {e}")
+            # Continue with original URL
+        
+        try:
+            # Process PDF directly from URL (in-memory, no disk save)
+            pdf_path, extracted_data, result_status = process_pdf_from_url(
+                pdf_url, 
+                rcs_number=rcs_number, 
+                filing_id=filing_id
+            )
+            
+            if result_status == "success" and extracted_data:
+                results.append({
+                    "deposit_number": deposit_number,
+                    "filing_id": filing_id,
+                    "status": "success",
+                    "extracted_data": extracted_data,
+                    "metadata": {
+                        "rcs_number": rcs_number,
+                        "deposit_number": deposit_number,
+                        "filing_id": filing_id,
+                        "filing_date": doc.get("filing_date"),
+                        "page_count": extracted_data.get("page_count"),
+                        "pdf_url": pdf_url
+                    }
+                })
+                successful += 1
+            else:
+                results.append({
+                    "deposit_number": deposit_number,
+                    "filing_id": filing_id,
+                    "status": "error",
+                    "error": result_status
+                })
+                failed += 1
+        
+        except Exception as e:
+            logger.error(f"Error processing {deposit_number}: {str(e)}", exc_info=True)
+            results.append({
+                "deposit_number": deposit_number,
+                "filing_id": filing_id,
+                "status": "error",
+                "error": str(e)
+            })
+            failed += 1
+    
+    return {
+        "total": len(documents),
+        "successful": successful,
+        "failed": failed,
+        "results": results
+    }
+
+
 @app.post("/api/v1/extract/job/{job_id}", tags=["Extraction"])
 async def extract_job_pdfs(
     job_id: str,
@@ -528,108 +635,23 @@ async def extract_job_pdfs(
         documents = job_data.get("documents", [])
         rcs_number = job_data.get("rcs_number")
         
-        if not documents:
-            return {
-                "status": "error",
-                "error": "No documents found in job"
-            }
-        
-        logger.info(f"Found {len(documents)} documents to extract for job {job_id}")
-        
         # 2. Extract data from each PDF using URLs directly
-        results = []
-        successful = 0
-        failed = 0
+        extraction_result = _extract_pdfs_from_documents(
+            documents, 
+            rcs_number, 
+            scraper_url, 
+            identifier_type="job", 
+            identifier_value=job_id
+        )
         
-        for doc in documents:
-            pdf_url = doc.get("pdf_path")
-            deposit_number = doc.get("deposit_number")
-            filing_id = doc.get("filing_id")
-            
-            if not pdf_url:
-                logger.warning(f"No PDF URL for document {deposit_number}")
-                failed += 1
-                results.append({
-                    "deposit_number": deposit_number,
-                    "status": "error",
-                    "error": "No PDF URL"
-                })
-                continue
-            
-            # Fix PDF URL if it points to wrong host/port
-            # Replace any host:port in the PDF URL with the scraper service URL
-            try:
-                parsed_pdf = urlparse(pdf_url)
-                parsed_scraper = urlparse(scraper_url)
-                
-                # If PDF URL has different host/port than scraper service, replace it
-                if parsed_pdf.netloc != parsed_scraper.netloc:
-                    logger.info(f"Replacing PDF URL host from {parsed_pdf.netloc} to {parsed_scraper.netloc}")
-                    # Reconstruct URL with scraper service host/port
-                    pdf_url = urlunparse((
-                        parsed_scraper.scheme,  # Use scraper service scheme
-                        parsed_scraper.netloc,  # Use scraper service host:port
-                        parsed_pdf.path,        # Keep original path
-                        parsed_pdf.params,      # Keep original params
-                        parsed_pdf.query,       # Keep original query
-                        parsed_pdf.fragment     # Keep original fragment
-                    ))
-                    logger.info(f"Updated PDF URL: {pdf_url}")
-            except Exception as e:
-                logger.warning(f"Could not parse/fix PDF URL {pdf_url}: {e}")
-                # Continue with original URL
-            
-            try:
-                # Process PDF directly from URL (in-memory, no disk save)
-                pdf_path, extracted_data, result_status = process_pdf_from_url(
-                    pdf_url, 
-                    rcs_number=rcs_number, 
-                    filing_id=filing_id
-                )
-                
-                if result_status == "success" and extracted_data:
-                    results.append({
-                        "deposit_number": deposit_number,
-                        "filing_id": filing_id,
-                        "status": "success",
-                        "extracted_data": extracted_data,
-                        "metadata": {
-                            "rcs_number": rcs_number,
-                            "deposit_number": deposit_number,
-                            "filing_id": filing_id,
-                            "filing_date": doc.get("filing_date"),
-                            "page_count": extracted_data.get("page_count"),
-                            "pdf_url": pdf_url
-                        }
-                    })
-                    successful += 1
-                else:
-                    results.append({
-                        "deposit_number": deposit_number,
-                        "filing_id": filing_id,
-                        "status": "error",
-                        "error": result_status
-                    })
-                    failed += 1
-            
-            except Exception as e:
-                logger.error(f"Error processing {deposit_number}: {str(e)}", exc_info=True)
-                results.append({
-                    "deposit_number": deposit_number,
-                    "filing_id": filing_id,
-                    "status": "error",
-                    "error": str(e)
-                })
-                failed += 1
+        if extraction_result.get("status") == "error":
+            return extraction_result
         
         return {
             "status": "completed",
             "job_id": job_id,
             "rcs_number": rcs_number,
-            "total": len(documents),
-            "successful": successful,
-            "failed": failed,
-            "results": results
+            **extraction_result
         }
     
     except HTTPException:
@@ -639,6 +661,79 @@ async def extract_job_pdfs(
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Failed to process job: {str(e)}"
+        )
+
+
+@app.post("/api/v1/extract/rcs/{rcs_number}", tags=["Extraction"])
+async def extract_rcs_pdfs(
+    rcs_number: str,
+    scraper_service_url: Optional[str] = Form(None, description="Scraper service URL to fetch PDFs")
+):
+    """
+    Extract data from all PDFs for an RCS number using PDF URLs directly.
+    PDFs are processed in-memory without saving to disk.
+    
+    - **rcs_number**: The RCS number (e.g., "B231239")
+    - **scraper_service_url**: URL of scraper service (default: http://localhost:8090)
+    
+    Fetches job details from scraper service using RCS number, then extracts data from all PDFs using their URLs.
+    """
+    # Handle scraper_service_url - check if it's None, empty, or invalid
+    if scraper_service_url and scraper_service_url.strip() and scraper_service_url != "string":
+        scraper_url = scraper_service_url.strip()
+    else:
+        scraper_url = os.getenv("SCRAPER_SERVICE_URL", "http://localhost:8090")
+    
+    # Ensure URL has scheme
+    if not scraper_url.startswith(("http://", "https://")):
+        scraper_url = f"http://{scraper_url}"
+    
+    logger.info(f"Using scraper service URL: {scraper_url}")
+    
+    try:
+        # 1. Fetch RCS details from scraper service
+        logger.info(f"Fetching RCS details for {rcs_number} from scraper service")
+        detail_response = requests.get(
+            f"{scraper_url}/api/v1/rcs/{rcs_number}",
+            timeout=30
+        )
+        
+        if detail_response.status_code != 200:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=f"RCS number {rcs_number} not found in scraper service"
+            )
+        
+        rcs_data = detail_response.json()
+        documents = rcs_data.get("documents", [])
+        job_id = rcs_data.get("job_id")
+        
+        # 2. Extract data from each PDF using URLs directly
+        extraction_result = _extract_pdfs_from_documents(
+            documents, 
+            rcs_number, 
+            scraper_url, 
+            identifier_type="rcs", 
+            identifier_value=rcs_number
+        )
+        
+        if extraction_result.get("status") == "error":
+            return extraction_result
+        
+        return {
+            "status": "completed",
+            "rcs_number": rcs_number,
+            "job_id": job_id,
+            **extraction_result
+        }
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error processing RCS {rcs_number}: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Failed to process RCS number: {str(e)}"
         )
 
 
