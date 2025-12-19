@@ -21,10 +21,10 @@ from pydantic import BaseModel, Field
 import uvicorn
 import pymupdf
 
-from .bsharp1001_rcs_extraction_engine.gateway import processForm, determineFormType
-from .bsharp1001_rcs_extraction_engine.helpers import T3ExtractedForm, T4ExtractedForm
-from .bsharp1001_rcs_extraction_engine.t3 import T3BsharpFormScrapper
-from .bsharp1001_rcs_extraction_engine.t4 import T4BsharpFormScrapper
+from .extractors.form_processor import processForm, determineFormType
+from .extractors.models import T3ExtractedForm, T4ExtractedForm
+from .extractors.t3_extractor import T3BsharpFormScrapper
+from .extractors.t4_extractor import T4BsharpFormScrapper
 
 # Configure logging
 logging.basicConfig(

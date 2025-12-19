@@ -165,15 +165,16 @@ Error responses include a `error` field with details:
 
 ### Project Structure
 ```
-rcs_extraction_service/
+extractor-service/
 ├── app/
-│   ├── main.py                          # FastAPI application
-│   └── bsharp1001_rcs_extraction_engine/
-│       ├── __init__.py
-│       ├── gateway.py                   # Main processing functions
-│       ├── t3.py                        # T3 form scraper
-│       ├── t4.py                        # T4 form scraper
-│       └── helpers.py                   # Data processing classes
+│   ├── __init__.py
+│   ├── main.py                          # FastAPI application and API endpoints
+│   └── extractors/                      # PDF form extraction engine
+│       ├── __init__.py                  # Module exports
+│       ├── form_processor.py            # Form type detection and processing orchestration
+│       ├── t3_extractor.py              # T3 form extractor/scraper
+│       ├── t4_extractor.py              # T4 form extractor/scraper
+│       └── models.py                    # Data models and form processing classes
 ├── mappings/                            # JSON mapping files
 │   ├── extracted_data_mapping.json
 │   ├── section_mapping.json

@@ -5,9 +5,9 @@ import os
 import traceback
 
 import pymupdf
-from .helpers import T3ExtractedForm, T4ExtractedForm, extractedForm
-from .t3 import T3BsharpFormScrapper
-from .t4 import T4BsharpFormScrapper
+from .models import T3ExtractedForm, T4ExtractedForm, extractedForm
+from .t3_extractor import T3BsharpFormScrapper
+from .t4_extractor import T4BsharpFormScrapper
 
 # Setup logging
 logger = logging.getLogger(__name__)

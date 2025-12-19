@@ -82,7 +82,17 @@ def isSection(span, drawings): #eg: Denomination, form juridique, associe, etc..
     return isTitle(span) and isUnderLined(span['bbox'], drawings)[0]
 
 def getFooterLine(blocks: list, pageWidth):
-    pageWidth = pageWidth
+    """
+    Extract footer line from PDF blocks.
+    Returns the bottommost image/line that spans 75-100% of page width.
+    
+    Args:
+        blocks: List of PDF blocks
+        pageWidth: Width of the page
+        
+    Returns:
+        Bounding box of footer line, or None if not found
+    """
     imgs = []
     for x in blocks:
         if x.keys().__contains__("ext") and x.keys().__contains__("colorspace") and x.keys().__contains__("type") and x['type'] == 1:
@@ -93,6 +103,11 @@ def getFooterLine(blocks: list, pageWidth):
             percentage = math.floor(length * 100 / pageWidth) 
             if percentage >= 75 and percentage <= 100:
                 imgs.append(img)
+    
+    if not imgs:
+        logger.warning("No footer line found in PDF blocks")
+        return None
+    
     imgs = sorted(imgs, key=lambda img: img[1])
     return imgs[-1]
 
@@ -484,7 +499,14 @@ def T4BsharpFormScrapper(pdf) -> tuple:
             page_height = first_page.rect.height
             textBlocks = first_page.get_text("dict",sort=True)
             footer_line = getFooterLine(textBlocks['blocks'], first_page.rect.width)
-            (footerText, footerRect) = getFooterText(footer_line[1], first_page)
+            
+            if footer_line is None:
+                logger.warning("Footer line not found, using page bottom as fallback", extra={'pdf_path': pdf})
+                footer_line_y = first_page.rect.y1 - 50  # Use bottom 50 pixels as fallback
+            else:
+                footer_line_y = footer_line[1]
+            
+            (footerText, footerRect) = getFooterText(footer_line_y, first_page)
             page_count = extractPageCount(footerText)
             existingSections = []
             absentSections  = []
